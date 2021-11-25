@@ -1,8 +1,0 @@
-twilio:
-  account_sid: ACc2e8444edf013bbcf70118f1bf9f28e4
-  auth_token: 9f73bf113ce1c47e148263ff68a55cd6
-  from_number_sms: "+14243527393"
-  from_number: "+14155238886"
-
-server:
-  port: 8081
