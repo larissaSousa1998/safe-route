@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeRoute - Cadastro</title>
+    <link rel="shortcut icon" href="image/icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/tablet.css">
+    <link rel="stylesheet" href="css/desktop.css">
+</head>
+<body>
+    <section class="area">
+        <div class="login-area">
+            <a href="index.html">
+                <i class="fas fa-chevron-left return"></i>
+            </a>
+            <div class="logo-area logo-area-cad">
+                <div>
+                    <h1>Documento</h1>
+                    <label for="">Estamos quase lá!</label>
+                </div>
+                <div>
+                    <img src="image/icon.png" class="icon">
+                </div>
+            </div>
+            <div class="input-area">
+                <label class="input-label">Tipo</label>
+                <select name="" id="registerTypeDocument" class="input-group select">
+                    <option value="">Tipo do documento</option>
+                    <option value="RG">RG</option>
+                    <option value="CNH">CNH</option>
+                </select>
+            </div>
+            <div class="input-area">
+                <label class="input-label">Numeração</label>
+                <input type="text" id="registerDocumentNumber" class="input-group" placeholder="Numeração do documento">
+            </div>
+            <div class="input-area">
+                <label class="input-label">Frente</label>
+                <div class="file">
+                    <i class="fas fa-upload icon-file"></i>
+                    <label for="">Frente.png</label>
+                    <input type="file" id="registerFrontDocument" class="input-group input-file" placeholder="frente.png" onchange="validarArquivo(this, 0.08)">
+                    <div id="fileFront"></div>
+                </div>
+            </div>
+            <div class="input-area">
+                <label class="input-label">Verso</label>
+                <div class="file">
+                    <i class="fas fa-upload icon-file"></i>
+                    <label for="">Verso.png</label>
+                    <input type="file" id="registerBackDocument" class="input-group input-file" placeholder="verso.png" onchange="validarArquivo(this, 0.08)">
+                    <div id="fileVerse"></div>
+                </div>
+            </div>
+            <div class="input-area button-area">
+                <input type="submit" id="next" class="input-group button" value="Próximo passo">
+            </div>
+            <div class="group-input steps">
+                <div class="line-steps"></div>
+                <div class="circles-area">
+                    <div class="circle gray">
+                        <h2>1</h2>
+                    </div>
+                    <div class="circle gray">
+                        <h2>2</h2>
+                    </div>
+                    <div class="circle gray">
+                        <h2>3</h2>
+                    </div>
+                    <div class="circle green">
+                        <h2>4</h2>
+                    </div>
+                    <div class="circle gray">
+                        <h2>5</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="image-area">
+            <img src="image/blob.png" class="blob" alt="">
+            <img src="image/image-register.png" class="image" alt="">
+        </div>
+    </section>
+    <script src="js/scripts/util/constantes.js"></script>
+    <script src="js/scripts/cadastro/validacaoArquivoInput.js"></script>
+    <script src="js/scripts/animacao/atualizarInputArquivo.js"></script>
+    <script src="js/scripts/cadastro/criarDocumento.js"></script>
+</body>
+</html>

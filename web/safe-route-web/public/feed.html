@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeRoute - Publicações</title>
+    <link rel="shortcut icon" href="image/icon.png" type="image/x-icon">
+    <script src="js/scripts/jquery.min.js"></script>
+    <script src="js/scripts/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/tablet.css">
+    <link rel="stylesheet" href="css/desktop.css">
+    <link rel="stylesheet" href="css/darkMode.css">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <section class="area area-saferoute area-group-locomotion">
+        <div class="nav-menu">
+            <div class="area-menu">
+                <div class="logotipo">
+                    <img src="image/icon.png" alt="" style="width: 30px;" id="logo-icon">
+                    <img src="image/logotype.png" alt="" style="width: 172px;" id="logo-type">
+                </div>
+                <div class="info-user">
+                    <span class="material-icons menu-icon">
+                        notifications_none
+                    </span>
+                    <div class="space-line"></div>
+                    <span class="material-icons-outlined menu-icon">
+                        settings
+                    </span>
+                    <div class="space-line"></div>
+                    <div class="perfil-image">
+                        <img class="profile-photo" alt="foto de perfil">
+                    </div>
+                    <span class="material-icons menu-icon expand">
+                        menu
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="route-area route-area-desktop">
+
+            <div class="side-menu-area none side-menu-desktop">
+                <div class="side-menu">
+
+                    <label class="subtitle">MENU</label>
+                    
+                    <div class="itens">
+                        <div class="item">
+                            <span class="material-icons-outlined icon-menu">
+                                home
+                            </span>
+                            <a href="home.html"><label>Home</label></a>
+                        </div>
+                    </div>
+                    <div class="itens">
+                        <div class="item">
+                            <span class="material-icons-outlined icon-menu">
+                                people
+                            </span>
+                            <a href="grupoLocomocao.html"><label>Grupos de locomoção</label></a>
+                        </div>
+                    </div>
+                    <div class="itens">
+                        <div class="item">
+                            <span class="material-icons-outlined icon-menu active">
+                                report_problem
+                            </span>
+                            <a href="feed.html"><label class="active">Publicações</label></a>
+                        </div>
+                    </div>
+                    <div class="itens bottom">
+                        <div class="item">
+                            <span class="material-icons-outlined icon-menu">
+                                fmd_bad
+                            </span>
+                            <a href="denuncia.html"><label>Denúncia</label></a>
+                        </div>
+                    </div>
+
+
+                    <label class="subtitle">CONFIGURAÇÕES</label>
+
+                    <div class="itens">
+                        <div class="item">
+                            <span class="material-icons-outlined icon-menu">
+                                portrait
+                            </span>
+                            <label>Perfil</label>
+                        </div>
+                    </div>
+                    <div class="itens">
+                        <div class="item">
+                            <span class="material-icons icon-menu">
+                                brightness_5
+                            </span>
+                            <label>Darkmode</label>
+                            <label class="switch">
+                                <input type="checkbox" id='checkDarkMode' onclick="enableDarkMode()">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="itens" onclick="sair()">
+                        <div class="item">
+                            <span class="material-icons-outlined icon-menu">
+                                logout
+                            </span>
+                            <label>Sair</label>
+                        </div>
+                    </div>
+                    <div class="alert">
+                        <div class="area-icon">
+                            <span class="material-icons icon icon-danger">
+                                report_gmailerrorred
+                            </span>
+                        </div>
+                        <label>Disparar pedido de ajuda</label>
+                    </div>
+                </div>
+            </div>
+
+          <div class="route-and-map header-group-desktop">
+
+            <div class="define-route header-group">
+                <div class="header-group-locomotion feed-title">
+                    <h1>Publicações</h1>
+                </div>
+
+                <div class="content-feed">
+                    <div class="publications">
+
+                        <div class="create-publication expandedModalCreate">
+                            
+                        </div>
+
+                        <div class="select-publicacoes">
+                        </div>
+                    </div>
+
+                    <div class="publicity">
+                        <div class="trending">
+                            <h1>Patrocinado</h1>
+                            <div class="moments">
+                                <div class="moment m1">
+                                    <span class="material-icons moment-icon mi1">
+                                        receipt
+                                    </span>
+                                    <p>20% OFF</p>  
+                                    <p class="moment-contact">www.loja.com.br</p>
+                                </div>
+                                <div class="moment m2">
+                                    <span class="material-icons moment-icon mi2">
+                                        receipt
+                                    </span>
+                                    <p>40% OFF</p> 
+                                    <p class="moment-contact">www.loja.com.br</p>
+                                </div>
+                                <div class="moment m3">
+                                    <span class="material-icons moment-icon mi3">
+                                        receipt
+                                    </span>
+                                    <p>20% OFF</p>
+                                    <p class="moment-contact">www.loja.com.br</p>
+                                </div>
+                                <div class="moment m4">
+                                    <span class="material-icons moment-icon mi4">
+                                        receipt
+                                    </span>
+                                    <p>60% OFF</p>
+                                    <p class="moment-contact">loja.com.br</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trending">
+                            <h1>Últimas notícias</h1>
+                            <div class="ultima-noticia">
+                                <div class="noticia-header">
+                                    <div class="logo-jornal">
+                                        <p>G1</p>
+                                    </div>
+                                    <h1>Portal de notícias G1</h1>
+                                    <div class="verify">
+                                        <span class="material-icons">
+                                            verified
+                                        </span>
+                                    </div>
+                                </div>
+                                <h1 class="title-ultima-noticia">
+                                    Só na pandemia, SP registrou 22 mil denúncias de violência contra a mulher Em entrevista ao Pânico, Elisabete Sato explicou .
+                                </h1>
+                                <div class="noticia-footer">
+                                    <p>Postado á 4 min</p>
+                                    <p class="circle-noticia"></p>
+                                    <p>125 visualizações</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+    <div class="shadow-area modal-create-publication noneImportant">
+        <div class="modal-area modal-area-publication">
+
+            <span class="material-icons icon-close">
+                close
+            </span>
+
+            <div class="header-modal">
+                <h1>Criar publicação</h1>
+            </div>
+            <form action="">
+                <div class="row-inputs">
+                    <input type="text" class="input-group modal-input input-title" id="title_publicacao" placeholder="Título">
+                </div>
+                <div class="row-inputs">
+                    <textarea id="text_publication" placeholder="No que você está pensando?"></textarea>
+                </div>
+                <div class="row-inputs">
+                    <div class="area-image-publication">
+                        <input type="file" id="image-publicacao" class="image-publication">
+                        <div class="text-file">
+                            <label>Adicionar imagem</label>
+                            <div class="area-icon-pub">
+                                <span class="material-icons">
+                                    insert_photo
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="area-image-publication area-local-publication">
+                        <input type="text" class="input-local-pub"  placeholder="Adicionar local">
+
+                        <div class="area-icon-pub-abs">
+                            <div class="area-icon-pub ">
+                                <span class="material-icons">
+                                   local_offer
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-inputs">
+                    <input type="button" class="btnCadGroup btnCreatePublication" value="Publicar"/>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    </section>
+
+    <script src="js/scripts/util/constantes.js"></script>
+
+    <!-- Autorizacao -->
+    <script src="js/scripts/autorizacao/fazerLogout.js"></script>
+    <script src="js/scripts/autorizacao/verificarSessao.js"></script>
+    
+    <script src="js/expandMenu.js"></script>
+
+    <!-- Animação -->
+    <script src="js/scripts/servicos/getIdUsuaria.js"></script>
+    <script src="js/scripts/animacao/darkMode.js"></script>
+    <script src="js/scripts/feed/modal.js"></script>
+    <script src="js/scripts/feed/createPublicacao.js"></script>
+    <script src="js/scripts/feed/getPublicacoes.js"></script>
+
+    <script src="js/scripts/servicos/pedido-ajuda/enviarPedidoAjuda.js"></script>
+</body>
+</html>

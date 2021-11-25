@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeRoute - Login</title>
+    <link rel="shortcut icon" href="image/icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="css/tablet.css">
+    <link rel="stylesheet" href="css/desktop.css">
+</head>
+<body>
+    <section class="area">
+        <div class="login-area">
+            <div class="logo-area">
+                <img src="image/logotype.png" alt="Safe Route" class="logo">
+            </div>
+            <div class="input-area">
+                <label class="input-label">Email</label>
+                <input type="text" id="user" class="input-group" placeholder="Seu email">
+            </div>
+            <div class="input-area">
+                <label class="input-label">Senha</label>
+                <input type="password" id="passwd" class="input-group" placeholder="Sua senha">
+            </div>
+            <div id="validationMessage">
+
+            </div>
+            <div class="input-area button-area">
+                <input type="submit" id="submit" class="input-group button" value="Entrar">
+            </div>
+            <div>
+                <label class="area-checkbox">
+                    Lembrar identificação de usuária
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <div class="separator-area separator">
+                <hr class="line">
+                <div>
+                    <label for="">OU</label>
+                </div>
+            </div>
+            <div class="input-area button-area">
+                <input type="submit" id="submit" class="input-group button button-border" value="Entrar com google">
+            </div>
+            <div class="text-cad">
+                <a href="dadosPessoais.html">Você não tem uma conta? <span>Cadastre-se</span></a> 
+            </div>
+        </div>
+        <div class="image-area">
+            <img src="image/blob.png" class="blob" alt="">
+            <img src="image/image-login.png" class="image" alt="">
+        </div>
+    </section>
+
+    <script src="js/scripts/util/constantes.js"></script>
+    <script src="js/scripts/autorizacao/fazerLogin.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprovação de usuárias</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/tablet.css">
+    <link rel="stylesheet" href="css/desktop.css">
+    <title>Dashboard SafeRoute</title>
+    <link rel="shortcut icon" href="../image/icon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+</head>
+
+<body>
+    <section class="area area-saferoute">
+        <div class="nav-menu">
+            <div class="area-menu">
+                <div class="logotipo">
+                    <img src="image/icon.png" alt="" style="width: 30px;">
+                </div>
+                <div class="info-user">
+                    <span class="material-icons menu-icon">
+                        notifications_none
+                    </span>
+                    <div class="space-line"></div>
+                    <span class="material-icons-outlined menu-icon">
+                        settings
+                    </span>
+                    <div class="space-line"></div>
+                    <div class="perfil-image">
+                        <img class="profile-photo" alt="foto de perfil">
+                    </div>
+                    <span class="material-icons menu-icon expand">
+                        menu
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="route-area header-group-desktop area-dashboard">
+
+            <div class="side-menu-area none side-menu-desktop">
+                <div class="side-menu">
+
+                    <label class="subtitle">MENU</label>
+
+                    <div class="itens">
+                        <div class="item">
+                            <span class="material-icons-outlined icon-menu">
+                                home
+                            </span>
+                            <a href="dashboardHome.html"><label>Home</label></a>
+                        </div>
+                    </div> 
+                    <div class="itens">
+                        <div class="item">
+                            <span class="material-icons-outlined icon-menu">
+                                people
+                            </span>
+                            <a href="dashboardUsuarias.html"><label>Usuárias</label></a>
+                        </div>
+                    </div>
+                    <div class="itens">
+                        <div class="item">
+                            <span class="material-icons-outlined icon-menu active">
+                                report_problem
+                            </span>
+                            <a href="dashboardDenuncias.html"><label class="active">Áreas de risco</label></a>
+                        </div>
+                    </div>
+                    <div class="itens bottom">
+                        <div class="item">
+                            <span class="material-icons icon-menu">
+                                feed
+                            </span>
+                            <label>Notícias</label>
+                        </div>
+                    </div>
+
+
+                    <label class="subtitle">CONFIGURAÇÕES</label>
+
+                    <div class="itens">
+                        <div class="item">
+                            <span class="material-icons-outlined icon-menu">
+                                portrait
+                            </span>
+                            <label>Perfil</label>
+                        </div>
+                    </div>
+                    <div class="itens">
+                        <div class="item">
+                            <span class="material-icons icon-menu">
+                                brightness_5
+                            </span>
+                            <label>Darkmode</label>
+                        </div>
+                    </div>
+                    <div class="itens" onclick="sair()">
+                        <div class="item">
+                            <span class="material-icons-outlined icon-menu">
+                                logout
+                            </span>
+                            <label>Sair</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="route-and-map header-group-desktop">
+                <div class="define-route header-group">
+                    <div class="findGroup">
+                        <div class="header-group-locomotion">
+                            <h1 class="title-find">
+                                Análise de denúncias
+                            </h1>
+                        </div>
+                        <div class="input-area input-area-denuncia">
+                            <div class="file">
+                                <i class="fas fa-upload icon-file"></i>
+                                <label for="">Importar arquivo</label>
+                                <input type="file" id="importFile" class="input-group input-file">
+                                <div id="fileSelfie"></div>
+                            </div>
+                        </div>
+                        <button class="btn-group btn-find-group" id="createGroup">                        
+                            <span id="textCSV">Importar TXT</span>
+                        </button>
+                    </div>
+
+                    <div class="indicators">
+                        <div class="area-indicators">
+                            <div class="icon-indicator">
+                                <h1>Denúncias com análise pendente</h1>
+                                <div class="numbers">
+                                    <span class="material-icons plus">
+                                        add_circle
+                                    </span>
+                                    <label id="label-icon" class="label-total-denuncias"></label>
+                                </div>
+                            </div>
+                            <div class="img-indicators">
+                                <img src="image/usuarias-pendentes.png">
+                            </div>
+                        </div>
+
+                        <div class="area-indicators">
+                            <div class="icon-indicator">
+                                <h1>Áreas de risco cadastradas</h1>
+                                <div class="numbers">
+                                    <span class="material-icons plus">
+                                        add_circle
+                                    </span>
+                                    <label id="label-icon" class="label-total-areas-risco"></label>
+                                </div>
+                            </div>
+                            <div class="img-indicators">
+                                <img src="image/contas-ativas.png">
+                            </div>
+                        </div>
+                    </div>
+
+                    <p id="titulo-area">Denúncias com avaliação pendente</p>
+
+                    <div id="contas-aprovacao-area" class="denuncias-aprovacao-area">
+                        
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <div class="shadow-area shadow-area-aprove-denuncia noneImportant">
+        <div class="modal-area modal-area-denuncia">
+            
+        </div>
+    </div>  
+    <script src="js/scripts/servicos/admin/autorizacao/fazerLogout.js"></script>
+    <script src="js/scripts/servicos/admin/autorizacao/verificarSessao.js"></script>
+    <script src="js/scripts/util/constantes.js"></script>
+    <script src ="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAckKLHl-T6HPk2pTVfxrjHXf4yLojpfw&callback=initMap&libraries=&v=weekly=initMap&libraries=drawing"></script>
+    <script src="js/expandMenu.js"></script>
+    <script src="js/scripts/util/constantes.js"></script>
+    <script src="js/scripts/servicos/admin/aprovacao-denuncias/getDenuncias.js"></script>
+    <script src="js/scripts/servicos/admin/aprovacao-denuncias/getDadosCards.js"></script>
+    <script src="js/scripts/conversores/converterEmCoordenadas.js"></script>
+
+    <script src="js/scripts/servicos/admin/upload/uploadArquivoAreasRisco.js"></script>
+
+</body>
+
+</html>

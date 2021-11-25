@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">Safe Route</string>
+    <string name="splash_title">Seja bem-vinda ao SafeRoute</string>
+    <string name="login_name">Login</string>
+    <string name="splash_description">Tenha opções de rotas seguras até seu ponto de destino</string>
+
+    <!--    LOGIN TEXTS-->
+    <string name="hint_user"> Usuária </string>
+    <string name="hint_password"> Senha </string>
+    <string name="checkbox_text">Lembrar identificação de usuária</string>
+    <string name="login_btn_text">Entrar</string>
+    <string name="sign_up_text">Você não tem uma conta?</string>
+    <string name="sign_up_text_color">Cadastre-se</string>
+    <string name="cadastro_btn_text">Próximo</string>
+    <string name="final_cadastro_btn_text">Finalizar Cadastro</string>
+    <string name="register_description">Estamos quase lá!!!</string>
+
+    <!--    REGISTER PERSONAL INFO TEXTS  -->
+    <string name="cadastro_title">Informações básicas</string>
+    <string name="cadastro_subtitle">Preencha os campos</string>
+    <string name="hint_name">Nome</string>
+    <string name="hint_email">E-mail</string>
+    <string name="hint_birth">Data de nascimento</string>
+
+    <!-- REGISTER PREVIEW DESTINATION TEXTS   -->
+    <string name="destination_title">Destino Prévio</string>
+    <string name="destination_subtitle">Qual local sempre frequenta?</string>
+    <string name="hint_description_destination">Descrição</string>
+    <string name="hint_cep">CEP</string>
+    <string name="hint_street">Logradouro</string>
+    <string name="hint_number">Número</string>
+
+    <!--    REGISTER TRUST CONTACT TEXTS-->
+    <string name="trust_contact_title">Contato de confiança</string>
+    <string name="hint_phone">Celular</string>
+
+    <!--    REGISTER DOCUMENT TEXTS-->
+    <string name="document_title">Documento</string>
+    <string name="document_subtitle">Confirma sua identidade</string>
+    <string name="hint_document_type">Tipo</string>
+    <string name="hint_document_number">Númeração</string>
+    <string name="hint_document_front">Tirar foto da frente</string>
+    <string name="hint_document_verse">Tirar foto do verso</string>
+
+    <!--    REGISTER SELFIE TEXTS-->
+    <string name="selfie_title">Tire uma selfie</string>
+    <string name="selfie_subtitle">Não se esqueça de dar um sorriso</string>
+    <string name="hint_selfie">Tirar selfie</string>
+
+    <!--   Previous destinations texts -->
+    <string name="previous_destinations_title">Destinos prévios</string>
+    <string name="previous_destinations_description">Veja ou cadastre seus destinos prévios</string>
+    <string name="previous_destinations_add_button">Adicionar um novo endereço</string>
+    <string name="previous_destinations_your_destinations">Seus destinos</string>
+    <string name="previous_destinations_new_destination_title">Novo destino prévio</string>
+    <string name="previous_destinations_new_destination_description">Preencha as informações</string>
+    <string name="new_destination_input_name">Nome</string>
+    <string name="new_destination_input_number">Número</string>
+    <string name="new_destination_input_destination">Logradouro</string>
+    <string name="new_destination_input_cep">CEP</string>
+    <string name="newdestination_input_state">Estado</string>
+    <string name="new_destination_button">Criar novo destino</string>
+    <string name="route_previous_destination_title">Destino Prévio</string>
+
+
+    <!--    HOME-->
+    <string name="home_welcome">%1$s, %2$s</string>
+    <string name="home_location">São Paulo - SP</string>
+    <string name="hint_location">Para onde vamos hoje?</string>
+    <string name="home_options">Algumas opções para você</string>
+    <string name="home_groups">Grupos de locomoção</string>
+    <string name="home_previous_destinations">Destinos prévios</string>
+    <string name="home_complaints">Suas denúncias</string>
+    <string name="home_feed">Feed de notícias</string>
+
+    <!--    Greetings-->
+    <string name="good_morning">Bom dia</string>
+    <string name="good_afternoon">Boa tarde</string>
+    <string name="good_evening">Boa noite</string>
+
+    <!--    VIEW PHOTO TEXTS-->
+    <string name="confirm_button">Confirmar</string>
+    <string name="try_again_button">Tirar Novamente</string>
+    <string name="title_activity_group_locomotion">GroupLocomotion</string>
+
+    <!--    USER GROUPS -->
+    <string name="title_user_groups">Grupos de locomoção</string>
+    <string name="subtitle_user_groups">Veja ou entre em novos grupos</string>
+    <string name="text_btn">Novo grupo de locomoção</string>
+    <string name="user_groups">Seus grupos</string>
+
+</resources>

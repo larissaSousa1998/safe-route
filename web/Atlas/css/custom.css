@@ -1,0 +1,192 @@
+/********** common setting **********/
+h2 {
+    font-size: 2.8rem !important;
+    font-weight: 700;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+
+img .row{
+    width: 300px;
+    height: 200px;
+}
+/* .col-2{
+    width: 500px;
+    height: 100px;
+} */
+
+.jumbotron {
+    margin-bottom: 0 !important;
+}
+
+.atlas-cta {
+    border-radius: 22px !important;
+    padding: 12px 30px !important;
+    font-weight: 700;
+    transition: .3s ease-in-out !important;
+}
+
+.atlas-cta:hover {
+    text-decoration: none;
+    transform: translateY(-5px);
+}
+
+.atlas-cta-wide {
+    width: 100%;
+}
+
+.cta-green {
+    background: #32BE60;
+    color: #ffffff;
+}
+
+
+.cta-green1 {
+    background: #ffffff;
+    color: #BA68C8;
+}
+
+.cta-green:hover {
+    color: #ffffff;
+    background: #BA68C8;
+}
+
+.cta-blue {
+    background: #32BE60;
+    color: #ffffff;
+}
+
+.cta-blue:hover {
+    color: #ffffff;
+    background: #32BE60;
+}
+
+.cta-ghost {
+    border: 2px solid #BA68C8!important;
+    color: #BA68C8;
+}
+
+.cta-ghost:hover {
+    color: #32BE60;
+}
+
+#banner {
+    background-size: cover;
+}
+
+/********** banner **********/
+#banner header {
+    overflow: hidden;
+}
+
+#banner header img {
+    max-width: 80px;
+}
+
+/********** feature (skew background) **********/
+.feature img {
+    width: 100%;
+    max-width: 480px;
+}
+
+#feature-first {
+    background: linear-gradient(168deg, #ffffff 55%, #BA68C8 0);
+}
+
+#feature-last {
+    background: #BA68C8;
+}
+
+/********** price table **********/
+#price-table {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+}
+
+#price-table__premium {
+    /* background: #192440; */
+    background: #32BE60;
+    opacity: 0.90;
+    color: #ffffff;
+}
+
+#price-table ul li {
+    padding: 5px 0;
+}
+
+/********** contact **********/
+#contact {
+    background-size: cover;
+}
+
+#contact ul li {
+    padding: 3px 0;
+}
+
+#contact form {
+    color: #ffffff;
+}
+
+#contact form input,
+#contact form textarea {
+    background: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+/********** copyright **********/
+#copyright {
+    background: #192440;
+    padding: 2rem 3rem;
+}
+
+#copyright #social-media a {
+    width: 40px;
+    height: 40px;
+    border-radius: 99%;
+    background: #ffffff;
+    transition: .4s ease;
+}
+
+#copyright #social-media a i {
+    color: #192440;
+    font-size: 1.2rem;
+    line-height: 40px;
+}
+
+#copyright #social-media a:hover {
+    background: #00FFAD;
+}
+
+#copyright #social-media a:hover i {
+    color: #ffffff;
+}
+
+.logo-area{
+    min-width: 700px !important;
+    min-height: 80px !important;
+}
+
+.image-logo{
+    min-width: 200px !important;
+    min-height: 15px !important;
+}
+
+.text-white{
+    color: #ffffff !important;
+}
+/********** RWD **********/
+@media (max-width: 575px) {
+    #banner h1 {
+        font-size: 3.6rem;
+    }
+}

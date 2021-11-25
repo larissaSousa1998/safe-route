@@ -1,0 +1,45 @@
+00USUARIAS09-06-2021 21:44:5701
+02Maria Helena                            maria@gmail.com               1998-07-22null          DesativadasAprovada  
+02Roberta Martins                         roberta@gmail.com             1996-08-14null          DesativadasAprovada  
+02Juliana                                 juliana@gmail.com             2000-12-12null          DesativadasAprovada  
+02Ana                                     ana@gmail.com                 2001-06-0699323-3212    Ativadas   Reprovada 
+02Paula                                   paula@gmail.com               2001-06-0699323-3212    Ativadas   Aprovada  
+02maria                                   mariasilva@gmail.com          2000-12-13null          DesativadasAprovada  
+02Ana Clara                               anac@gmail.com                2000-12-13null          DesativadasAprovada  
+02Maria Julia                             maju13@gmail.com              1994-04-15null          DesativadasReprovada 
+02Joana Lins Ribeiro                      jolins@gmail.com              1998-07-12null          DesativadasReprovada 
+02Jussara Pereira Santos                  jupereira@gmail.com           2000-08-08null          DesativadasAprovada  
+02Sandra Oliveira Santos                  sasa@gmail.com                1980-05-07null          DesativadasAprovada  
+02Carmem Luiza Ferreira                   ca12@gmail.com                2002-09-21null          DesativadasAprovada  
+02Tabata Junqueira Borges                 tabata43@gmail.com            2001-10-15null          DesativadasAprovada  
+01   13
+00USUARIAS09-06-2021 21:45:0501
+02Maria Helena                            maria@gmail.com               1998-07-22null          DesativadasAprovada  
+02Roberta Martins                         roberta@gmail.com             1996-08-14null          DesativadasAprovada  
+02Juliana                                 juliana@gmail.com             2000-12-12null          DesativadasAprovada  
+02Ana                                     ana@gmail.com                 2001-06-0699323-3212    Ativadas   Reprovada 
+02Paula                                   paula@gmail.com               2001-06-0699323-3212    Ativadas   Aprovada  
+02maria                                   mariasilva@gmail.com          2000-12-13null          DesativadasAprovada  
+02Ana Clara                               anac@gmail.com                2000-12-13null          DesativadasAprovada  
+02Maria Julia                             maju13@gmail.com              1994-04-15null          DesativadasReprovada 
+02Joana Lins Ribeiro                      jolins@gmail.com              1998-07-12null          DesativadasReprovada 
+02Jussara Pereira Santos                  jupereira@gmail.com           2000-08-08null          DesativadasAprovada  
+02Sandra Oliveira Santos                  sasa@gmail.com                1980-05-07null          DesativadasAprovada  
+02Carmem Luiza Ferreira                   ca12@gmail.com                2002-09-21null          DesativadasAprovada  
+02Tabata Junqueira Borges                 tabata43@gmail.com            2001-10-15null          DesativadasAprovada  
+01   13
+00USUARIAS09-06-2021 21:46:1001
+02Maria Helena                            maria@gmail.com               1998-07-22null          DesativadasAprovada  
+02Roberta Martins                         roberta@gmail.com             1996-08-14null          DesativadasAprovada  
+02Juliana                                 juliana@gmail.com             2000-12-12null          DesativadasAprovada  
+02Ana                                     ana@gmail.com                 2001-06-0699323-3212    Ativadas   Reprovada 
+02Paula                                   paula@gmail.com               2001-06-0699323-3212    Ativadas   Aprovada  
+02maria                                   mariasilva@gmail.com          2000-12-13null          DesativadasAprovada  
+02Ana Clara                               anac@gmail.com                2000-12-13null          DesativadasAprovada  
+02Maria Julia                             maju13@gmail.com              1994-04-15null          DesativadasReprovada 
+02Joana Lins Ribeiro                      jolins@gmail.com              1998-07-12null          DesativadasReprovada 
+02Jussara Pereira Santos                  jupereira@gmail.com           2000-08-08null          DesativadasAprovada  
+02Sandra Oliveira Santos                  sasa@gmail.com                1980-05-07null          DesativadasAprovada  
+02Carmem Luiza Ferreira                   ca12@gmail.com                2002-09-21null          DesativadasAprovada  
+02Tabata Junqueira Borges                 tabata43@gmail.com            2001-10-15null          DesativadasAprovada  
+01   13

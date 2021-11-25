@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeRoute - Home</title>
+    <link rel="shortcut icon" href="../image/icon.png" type="image/x-icon">
+    <script src="js/scripts/jquery.min.js"></script>
+    <script src="js/scripts/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/tablet.css">
+    <link rel="stylesheet" href="css/desktop.css">
+    <link rel="stylesheet" href="css/darkMode.css">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <section class="area area-saferoute">
+        <div class="nav-menu">
+            <div class="area-menu">
+                <div class="logotipo">
+                    <img src="image/icon.png" alt="" style="width: 30px;" id="logo-icon">
+                    <img src="image/logotype.png" alt="" style="width: 172px;" id="logo-type">
+                </div>
+                <div class="info-user">
+                    <span class="material-icons menu-icon">
+                        notifications_none
+                    </span>
+                    <div class="space-line"></div>
+                    <span class="material-icons-outlined menu-icon">
+                        settings
+                    </span>
+                    <div class="space-line"></div>
+                    <div class="perfil-image">
+                        <img class="profile-photo" alt="foto de perfil">
+                    </div>
+                    <span class="material-icons menu-icon expand">
+                        menu
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="route-area">
+
+            <div class="side-menu-area none">
+                <div class="side-menu">
+
+                    <label class="subtitle">MENU</label>
+                    
+                    <div class="itens">
+                        <div class="item">
+                            <span class="material-icons-outlined icon-menu active">
+                                home
+                            </span>
+                            <a href="home.html"><label class="active">Home</label></a>
+                        </div>
+                    </div>
+                    <div class="itens">
+                        <div class="item">
+                            <span class="material-icons-outlined icon-menu">
+                                people
+                            </span>
+                            <a href="grupoLocomocao.html"><label>Grupos de locomoção</label></a>
+                        </div>
+                    </div>
+                    <div class="itens">
+                        <div class="item">
+                            <span class="material-icons-outlined icon-menu">
+                                report_problem
+                            </span>
+                            <a href="feed.html"><label>Publicações</label></a>
+                        </div>
+                    </div>
+                    <div class="itens bottom">
+                        <div class="item">
+                            <span class="material-icons-outlined icon-menu">
+                                fmd_bad
+                            </span>
+                            <a href="denuncia.html"><label>Denúncia</label></a>
+                        </div>
+                    </div>
+
+                    <label class="subtitle">CONFIGURAÇÕES</label>
+
+                    <div class="itens">
+                        <div class="item">
+                            <span class="material-icons-outlined icon-menu">
+                                portrait
+                            </span>
+                            <label>Perfil</label>
+                        </div>
+                    </div>
+                    <div class="itens">
+                        <div class="item">
+                            <span class="material-icons icon-menu">
+                                brightness_5
+                            </span>
+                            <label>Darkmode</label>
+                            <label class="switch">
+                                <input type="checkbox" id='checkDarkMode' onclick="enableDarkMode()">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="itens" onclick="sair()">
+                        <div class="item">
+                            <span class="material-icons-outlined icon-menu">
+                                logout
+                            </span>
+                            <label>Sair</label>
+                        </div>
+                    </div>
+
+                    <div class="alert">
+                        <div class="area-icon">
+                            <span class="material-icons icon icon-danger">
+                                report_gmailerrorred
+                            </span>
+                        </div>
+                        <label>Disparar pedido de ajuda</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="route-and-map">
+                <!-- 1 -->
+                <div class="define-route define-initial" >
+                    <h1>Defina sua rota</h1>
+                    <div class="search">
+                        <div class="input-search">
+                            <div class="input-area">
+                                <input type="text" id="txtEnderecoPartida" class="input-group color-input" placeholder="Onde estamos?">
+                                <span class="material-icons icon-input" id="btnEndereco1">
+                                    radio_button_unchecked
+                                </span>
+                            </div>
+                            <div class="input-area ">
+                                <input type="text" id="txtEnderecoChegada" class="input-group color-input" placeholder="Para onde vamos?">
+                                <span class="material-icons icon-input" id="btnEndereco2">
+                                    place
+                                </span>
+                            </div>
+                        </div>
+                        <div class="switch-search" >
+                            <div class="switch-button">
+                                <span class="material-icons" id="trocaEndereco" onclick="trocarEndereco()">
+                                    swap_vert
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="route-options">
+                        <div class="route-option previous-destination">
+                            <div class="area-icon">
+                                <span class="material-icons icon">
+                                    home
+                                </span>
+                            </div>
+                            <label>Destino prévio</label>
+                        </div>
+                        <div class="route-option group-route-option">
+                            <div class="area-icon">
+                                <span class="material-icons icon">
+                                    people 
+                                </span>
+                            </div>
+                            <label>Grupo de locomoção</label>
+                        </div>
+                    </div>
+    
+                    <div class="routes-suggestion">
+
+                        <div class="destinations previous none">
+                            <div class="input-area">
+                                <input type="text" id="search" class="input-group color-input" placeholder="Buscar destino prévio">
+                                <span class="material-icons icon-input">
+                                    home
+                                </span>
+                            </div>
+                            <h3>Destinos prévios</h3>
+
+                           
+                        </div>
+
+                        <div class="destinations group-locomotion none">
+                            <div class="input-area">
+                                <input type="text" id="search" class="input-group color-input" placeholder="Buscar grupo de locomoção">
+                                <span class="material-icons icon-input">
+                                    people
+                                </span>
+                            </div>
+                            <h3>Grupos de locomoção</h3>
+
+                            <div id="groups-list"></div>
+                        </div>
+
+                        <div class="waiting-route">
+                            <h3>Defina uma rota</h3>
+                            <img src="image/defineroute.png" class="img-wainting-route">
+                        </div>
+
+                        <div id="trajeto-texto" class="none">
+                            
+                            <div class="area-btn-defined">
+                                <button class="btn-defined-destination" id="setRouteTeste">Seguir por este caminho</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    
+                </div>
+
+
+                <!-- 2 -->
+                <div class="define-route options-route none" data-anime="top">
+                    <h1>Casa</h1>
+
+                    <div class="input-search defined">
+                        <div class="input-area">
+                            <input type="text" id="input-current-location" class="input-group color-input" placeholder="Meu local" disabled>
+                            <span class="material-icons icon-input">
+                                radio_button_unchecked
+                            </span>
+                        </div>
+                        <div class="input-area ">
+                            <input type="text" id="input-destination" class="input-group color-input" disabled>
+                            <span class="material-icons icon-input">
+                                place
+                            </span>
+                        </div>
+                    </div>
+    
+                    <div class="routes-suggestion routes-suggestion-options">
+                        
+                        <div id="trajeto-texto2">
+                            
+                            <div class="area-btn-defined area-btn-defined-previou">
+                                <button class="btn-defined-destination add-color-btn" id="setRoutePreviou">Seguir por este caminho</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 3 -->
+                <div class="define-route routes-path none" data-anime="top">
+                    <h1>Casa</h1>
+
+                    <div class="input-search defined">
+                        <div class="input-area">
+                            <input type="text" id="search" class="input-group color-input" placeholder="Meu local" disabled>
+                            <span class="material-icons icon-input">
+                                radio_button_unchecked
+                            </span>
+                        </div>
+                        <div class="input-area ">
+                            <input type="text" id="search" class="input-group color-input" placeholder="Avenida Paulista,  n° 154" disabled>
+                            <span class="material-icons icon-input">
+                                place
+                            </span>
+                        </div>
+                    </div>
+    
+                    <div class="routes-suggestion routes-suggestion-options route-streets">
+                        <h3>Avenida Paulista, n° 154</h3>
+                        <label>1.5 km, cerca de 15 minutos</label>
+                       
+                        <div class="streets">
+                            
+                            <div class="street">
+                                <div class="street-icon">
+                                    <span class="material-icons">
+                                        subdirectory_arrow_right
+                                    </span>
+                                </div>
+                                <div class="street-text">
+                                    <label>
+                                        1. Vire à direita na R.  Haddock Lobo
+                                    </label>
+                                    <label class="distance">63km</label>
+                                </div>
+                            </div>
+
+                            <div class="street">
+                                <div class="street-icon">
+                                    <span class="material-icons">
+                                        subdirectory_arrow_right
+                                    </span>
+                                </div>
+                                <div class="street-text">
+                                    <label>
+                                        1. Vire à direita na R.  Haddock Lobo
+                                    </label>
+                                    <label class="distance">63km</label>
+                                </div>
+                            </div>
+
+                            <div class="street">
+                                <div class="street-icon">
+                                    <span class="material-icons">
+                                        subdirectory_arrow_right
+                                    </span>
+                                </div>
+                                <div class="street-text">
+                                    <label>
+                                        1. Vire à direita na R.  Haddock Lobo
+                                    </label>
+                                    <label class="distance">63km</label>
+                                </div>
+                            </div>
+
+                            <div class="street">
+                                <div class="street-icon">
+                                    <span class="material-icons">
+                                        subdirectory_arrow_right
+                                    </span>
+                                </div>
+                                <div class="street-text">
+                                    <label>
+                                        1. Vire à direita na R.  Haddock Lobo
+                                    </label>
+                                    <label class="distance">63km</label>
+                                </div>
+                            </div>
+
+                            <div class="street">
+                                <div class="street-icon">
+                                    <span class="material-icons">
+                                        subdirectory_arrow_right
+                                    </span>
+                                </div>
+                                <div class="street-text">
+                                    <label>
+                                        1. Vire à direita na R.  Haddock Lobo
+                                    </label>
+                                    <label class="distance">63km</label>
+                                </div>
+                            </div>
+
+                            <div class="street">
+                                <div class="street-icon">
+                                    <span class="material-icons">
+                                        subdirectory_arrow_right
+                                    </span>
+                                </div>
+                                <div class="street-text">
+                                    <label>
+                                        1. Vire à direita na R.  Haddock Lobo
+                                    </label>
+                                    <label class="distance">63km</label>
+                                </div>
+                            </div>
+
+                            <div class="street">
+                                <div class="street-icon">
+                                    <span class="material-icons">
+                                        subdirectory_arrow_right
+                                    </span>
+                                </div>
+                                <div class="street-text">
+                                    <label>
+                                        1. Vire à direita na R.  Haddock Lobo
+                                    </label>
+                                    <label class="distance">63km</label>
+                                </div>
+                            </div>
+
+                            <div class="street">
+                                <div class="street-icon">
+                                    <span class="material-icons">
+                                        subdirectory_arrow_right
+                                    </span>
+                                </div>
+                                <div class="street-text">
+                                    <label class="label-street">
+                                        1. Vire à direita na R.  Haddock Lobo
+                                    </label>
+                                    <label class="distance">
+                                        63km
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1 GROUP -->
+                <div class="define-route routes-path route-group none" data-anime="top">
+                    <h1>Alunas da uncid</h1>
+                    <div class="routes-suggestion routes-suggestion-options card-route-group">
+                        <div class="card-destination group-destination card-route-group-information">
+                            <div class="text text-group-route">
+                                <label><span class="bold">Saída prevista:</span> 21:30 hrs</label>
+                                <label><span class="bold">Destino:</span> Avenida Paulista,  n° 1543</label>
+                                <label><span class="bold">Partida:</span> Haddock lobo, 1553</label>
+                                <label class="card-date">
+                                    <span class="material-icons icon-date">
+                                        event_available
+                                    </span>
+                                    <span class="label-date">
+                                        22/04/2021
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="icons">
+                                <div class="icon-chat">
+                                    <span class="material-icons">
+                                        comment
+                                    </span>
+                                </div>
+                                <div class="members">
+                                    <div class="member blue">
+                                        <label>GH</label>
+                                    </div>
+                                    <div class="member purple">
+                                        <label>CM</label>
+                                    </div>
+                                    <div class="member orange">
+                                        <label>+5</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="routes-suggestion routes-suggestion-options">
+                        <h3>Rotas sugeridas</h3>
+
+                        <div class="card-destination card-destination-suggestion" id="1">
+                            <div class="text">
+                                <h4>Avenida Paulista</h4>
+                                <label for="">8km</label>
+                                <label for="">Cerca de 11 minutos</label>
+                            </div>
+                            <div class="icon-walk">
+                                <span class="material-icons">
+                                    directions_walk
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="card-destination card-destination-suggestion" id="2">
+                            <div class="text">
+                                <h4>Haddock Lobo</h4>
+                                <label for="">8km</label>
+                                <label for="">Cerca de 11 minutos</label>
+                            </div>
+                            <div class="icon-walk">
+                                <span class="material-icons">
+                                    directions_walk
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="area-btn-defined">
+                            <button class="btn-defined-destination" id="setRouteGroup">Seguir por este caminho</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 2 GROUP -->
+
+                <div class="define-route routes-path  route-path-group none" data-anime="top" >
+                    <h1 id="groupRouteTitle"></h1>
+                    <div id="areaCardGroup">
+                            
+                    </div>
+    
+                    <div id="routes-suggestion-groups" class="routes-suggestion routes-suggestion-options route-streets">
+                        <div id="trajeto-texto3">
+                            
+                            <div class="area-btn-defined area-btn-defined-previou">
+                                <button class="btn-defined-destination add-color-btn setRoute" id="setRoutePreviou" onclick="setRouteGroups(this)">Seguir por este caminho</button>
+                            </div>
+                        </div>
+                    
+                    </div>
+
+                </div>
+
+                <div class="maps-area" id="mapa">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <script src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCAckKLHl-T6HPk2pTVfxrjHXf4yLojpfw&callback=initMap&libraries=&v=weekly=initMap&libraries=drawing"></script>
+
+    <script src="js/scripts/util/constantes.js"></script>
+
+     <!-- Autorizacao -->
+     <script src="js/scripts/autorizacao/fazerLogout.js"></script>
+     <script src="js/scripts/autorizacao/verificarSessao.js"></script>
+
+    <!-- Conversores -->
+    <script src="js/scripts/conversores/converterEmCoordenadas.js"></script>
+    <script src="js/scripts/conversores/converterEmEndereco.js"></script>
+
+    <script src="js/scripts/construirMapa.js"></script>
+    <script src="js/scripts/servicos/getIdUsuaria.js"></script>
+    <script src="js/scripts/mapa/montarRota.js"></script>
+    <script src="js/choiceRoute.js"></script>
+    <script src="js/setRoute.js"></script>
+    <script src="js/expandMenu.js"></script>
+
+    <!-- Destinos previos -->
+    <script src="js/setRouteDestinoPrevio.js"></script>
+    <script src="js/scripts/servicos/destinos-previos/getDestinosPrevios.js"></script>
+    <script src="js/scripts/servicos/destinos-previos/montarRotaDestinoPrevio.js"></script>
+
+    <!-- Grupos de locomocao -->
+    <script src="js/scripts/servicos/grupos-locomocao/getRotaGrupoLocomocao.js"></script>
+    <script src="js/scripts/servicos/grupos-locomocao/getGruposLocomocaoUsuaria.js"></script>
+    <script src="js/scripts/servicos/grupos-locomocao/listarGruposParaRotas.js"></script>
+    <script src="js/scripts/mapa/montarRotaUsuaria.js"></script>
+
+    <!-- Animação -->
+    <script src="js/scripts/animacao/darkMode.js"></script>
+
+    <script src="js/scripts/servicos/pedido-ajuda/enviarPedidoAjuda.js"></script>
+</body>
+</html>

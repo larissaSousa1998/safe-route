@@ -1,0 +1,578 @@
+@media(min-width: 992px) {
+
+    body{
+        overflow: hidden;
+    }
+    
+    section.area{
+        display: flex;
+        box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.06);
+    }
+
+    section.area div.login-area{
+        padding: 100px 20px;
+        width: 30%;
+    }
+
+    section.area div.image-area{
+        width: 70%;
+        height: 100vh;
+        position: relative;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #F9F9F9;
+    }
+
+    section.area div.image-area .blob{
+        width: 90%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        position: absolute;
+        z-index: 0;
+    }
+
+    section.area div.image-area .image{
+        width: 60%;
+        z-index: 1;
+    }
+
+
+    div.separator div{
+        width: 16%;
+        margin-left: 42%;
+    }
+
+    /* ------------------------------------ */
+    .area-menu{
+        padding: 0 20px !important;
+    }
+
+    .area-saferoute{
+        width: 100%;
+        display: unset !important;
+    }
+
+    .route-area{
+        padding-top: 70px;
+        height: auto;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-direction: row;
+    }
+
+    .route-and-map{
+        width: 80%;
+        height: 100vh;
+        display: flex;
+        padding-top: 0;
+        flex-direction: row;
+    }
+
+    .define-route{
+        width: 38%;
+        align-items: flex-start !important;
+        padding: 0 20px !important;
+        padding-top: 20px !important;
+    }
+
+    .maps-area{
+        width: 62%;
+        height: 100%;
+        background: tomato;
+        display: unset;
+        margin: 0 ;
+    }
+
+    .side-menu-area{
+        display: flex;
+        height: 100vh;
+        width: 20%;
+        position: unset;
+        box-sizing: border-box;
+    }
+
+    .side-menu{
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 20px;
+        padding-top: 40px;
+    }
+
+    .routes-suggestion{
+        height: 250px;
+    }
+
+    .destinations{
+        width: 100%;
+    }
+
+    #routes-suggestion-groups{
+        min-height: 150px !important;
+    }
+
+    /* ---------------------- */
+
+   .header-group{
+        width: 100%;
+   }
+
+   .card-detail{
+        width: 32%;
+   }
+
+   .group-details{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+   }
+
+   .groups-area{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: auto !important;
+   }
+
+   .groups{
+        width: 32%;
+        height: auto !important;
+   }
+
+   .buttons{
+       width: 32%;
+   }
+
+   .cards-group{
+       height: 410 !important;
+   }
+
+   /* --------------- */
+
+    .modal-area{
+        width: 55%;
+    }
+
+    .cards-group{
+        height: 290px !important;
+    }
+
+    body.body-group-locomotion{
+        overflow-y: auto;
+    }
+
+    .side-menu-desktop{
+        left: 0;
+        top: 70px;
+        position: fixed;
+    }
+
+    .route-area-desktop{
+        box-sizing: border-box;
+        width: 80%;
+        margin-left: 20%;
+    }
+
+    .header-group-desktop{
+        width: 100%;
+    }
+
+    /* ----------------------- */
+
+    .findGroup{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .input-area-find-group, .btn-find-group, .card-find-group, 
+    .cardNewGroup{
+        width: 32%;
+    }
+
+    .list-groups-cards,
+    #grupos-descobrir-area{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .card-modal-members{
+        height: 240px;
+    }
+
+    .modal-card-group{
+        width: 556px;
+        height: 630px;
+        max-width: 556px;
+        max-height: 630px;
+    }
+
+    .card-modal-group{
+        width: 100%;
+    }
+
+    .modal-card-group,
+    .card-modal-group{
+        min-width: 556px !important;
+        min-height: 660px !important;
+        width: 556px !important;
+        height: 660px !important;
+    }
+
+    .modal-area-new-group{
+        min-width: 660px;
+        width: 660px;
+        min-height: 360px !important;
+        height: 360px !important;
+        position: relative;
+    }
+
+    .enter-group{
+        padding-top: 20px;
+    }
+
+    .btn-enter-group{
+        width: 100%;
+    }
+
+    .modal-card-group{
+        width: 556px;
+        height: 660px;
+        max-width: 556px;
+        max-height: 660px;
+    }
+
+    .input-modal-card-user,
+    .disabled{
+        width: 100% !important;
+    }
+
+    .area-dashboard{
+        width: 80%;
+        margin-left: 20%;
+    }
+
+
+    /* ------------- */
+    
+    .modal-area-aprove{
+        width: 75% !important;
+        height: auto;
+    }
+
+    .row-document{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .document-photo{
+        width: 20%;
+    }
+
+    .document{
+        height: 200px;
+    }
+
+    .document-horizontal{
+        width: 38%;
+    }
+
+    .document-image-photo{
+        width: 100%;
+    }
+
+    .modal-area-aprove{
+        box-sizing: border-box;
+        padding: 40px !important;
+    }
+
+    .input-modal-aprove, 
+    .btnModalAprove{
+        width: 32%;
+    }
+
+    .row-inputs-aprove{
+        flex-direction: row;
+    }
+
+    .row-one-button-aprove{
+        justify-content: flex-end;
+    }
+
+    .btnModalAprove{
+        margin-left: 2%;
+    }
+
+    .form-area{
+        width: 35%;
+    }
+
+    #descricaoDenuncia{
+        height: 180px;
+    }
+
+    .form-area{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .form{
+        width: 35%;
+    }
+
+    .form-map{
+        width: 63%;
+    }
+
+    .content-feed{
+        width: 100% !important;
+        height: auto;
+        display: flex;
+        justify-content: space-between !important;
+    }
+
+    .publications{
+        width: 62%;
+    }
+
+    .publicity{
+        width: 33%; 
+        height: auto;
+        display: block;
+    }
+
+    .trending{
+        width: 100%; 
+        height: 230px;
+        background: var(--white);
+        border-radius: 8px;
+        border: 1px solid var(--border);
+        margin-bottom: 25px;
+        box-sizing: border-box;
+        padding: 10px 20px;
+        
+    }
+    
+    .trending h1{
+        font-size: 16px;
+    }
+
+    .moments{
+        width: 100%;
+        height: 87%;
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 5px;
+        box-sizing: border-box;
+        padding-top: 8px;
+    }
+    
+    .moment{
+        width: 48%;
+        height: 46%;
+        border-radius: 5px;
+    }
+
+    .modal-area-publication{
+        min-width: 550px!important;
+        min-height: 440px !important;
+        width: 550px!important;
+        height: 440px !important;
+    }
+
+    .area-image-publication{
+        width: 49%;
+    }
+
+    .ultima-noticia{
+        width: 100%;
+        height: auto;
+        margin-top: 15px;
+    }
+
+    .noticia-header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .logo-jornal{
+        min-height: 35px;
+        min-width: 35px;
+        height: 35px;
+        width: 35px;
+        border-radius: 5px;
+        background: rgb(235, 79, 79);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo-jornal p{
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+    }
+
+    .noticia-header h1{
+        margin: 0 10px;
+    }
+
+    .verify{
+        min-height: 22px;
+        min-width: 22px;
+        height: 22px;
+        width: 22px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .verify span{
+        color: #3f82ff;
+    }
+
+    .noticia-footer{
+        display: flex;
+        flex-direction: row;
+        align-items: center !important;
+    }
+
+}
+/* Dashboard */
+
+.dashboard{
+    width: 90%;
+    height: 100vh;
+    align-items: flex-start !important;
+    padding: 0 30px !important;
+    padding-top: 40px !important;
+    flex-direction: row;
+}
+
+.indicators{
+    margin-bottom: 30px;
+}
+
+.indicators h1{
+    font-size: 14px;
+    padding-left: 20px;
+    font-weight: 500;
+}
+
+.area-admin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin{
+    width: 48%;
+    max-height: 380px;
+    height: 100px;
+    /* background-color: white;  */
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-area{
+    width: 95%;
+    height: 85%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.espaco-img{
+    width: 15%;
+    height: 100%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.informacao-user{
+    width: 40%;
+    height: 100%;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.aprovacoes{
+    width: 45%;
+    height: 100%;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#name-user{
+    padding-bottom: 8px;
+    font-weight: bold;
+}
+
+#email-user{
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.img2{
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary);
+    border-radius: 100%;
+}
+
+.img2 img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.span-material{
+    display: flex;
+    align-items: center;
+    /* background-color: yellow; */
+    width: 100%;
+    padding-bottom: 8px;
+}
+
+@media(min-width: 1366px) {
+    section.area div.login-area{
+        padding: 100px 50px;
+    }
+
+    .destinations{
+        width: 80%;
+    }
+
+    .modal-area{
+        width: 48%;
+    }
+}
+
+@media(min-width: 1200px) {
+    .cards-group{
+        height: 410px !important;
+    }
+}
+

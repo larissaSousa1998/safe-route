@@ -1,0 +1,6 @@
+DEV_BASE_URL = "http://54.85.171.221:8080";
+BASE_URL = DEV_BASE_URL;
+// BASE_URL = "https://safe-route-1622945359282.azurewebsites.net";
+
+DEV_BASE_URL_MESSENGER = "http://localhost:8081";
+BASE_URL_MESSENGER = DEV_BASE_URL_MESSENGER;

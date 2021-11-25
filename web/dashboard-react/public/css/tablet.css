@@ -1,0 +1,167 @@
+@media(min-width: 767px){ 
+    section.area div.login-area{
+        padding: 80px 150px;
+    }
+
+    div.separator div{
+        width: 6%;
+        margin-left: 47%;
+    }
+
+    section.area div.image-area{
+        display: none;
+    }
+
+    /* ------------- */
+
+
+    .area-menu, .define-route{
+        padding: 0 80px !important;
+    }
+
+    .define-route{
+        padding-top: 20px !important;
+    }
+
+    .route-and-map{
+        flex-direction: column;
+    }
+
+    .route-option{
+        justify-content: center;
+    }
+
+    .maps-area{
+        margin-top: 30px;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        background: tomato;
+    }
+
+    .destinations{
+        width: 45%;
+    }
+
+    /* -------------- */
+
+    .buttons{
+        width: 52%;
+        margin: 0;
+    }
+
+    .header-group-locomotion h1{
+        width: 40%;
+    }
+
+    .header-group-locomotion{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* ----------- */
+
+    .modal-area{
+        width: 80%;
+        height: 370px;
+    }
+
+    .header-modal{
+        margin-bottom: 15px;
+    }
+
+    .input-modal{
+        width: 48%;
+    }
+
+    .row-inputs{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .btnCadGroup{
+        width: 48%;
+        margin-top: 20px;
+    }
+
+    .row-one-button{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    /* ------------- */
+
+    #logo-type{
+        display: flex;
+    }
+
+    #logo-icon{
+        display: none;
+    }
+
+    /* ------------ */
+
+    .title-find{
+        width: 100% !important;
+    }
+
+    .card-modal-members{
+        height: 240px;
+    }
+
+    .modal-card-group{
+        width: 556px;
+        height: 630px;
+        max-width: 556px;
+        max-height: 630px;
+    }
+
+    .card-modal-group{
+        width: 100%;
+    }
+
+    .enter-group{
+        padding-top: 20px;
+    }
+
+    .modal-card-group{
+        width: 556px;
+        height: 660px;
+        max-width: 556px;
+        max-height: 660px;
+    }
+
+    .input-modal-card-user,
+    .disabled{
+        width: 100%;
+    }
+
+    .modal-area-aprove{
+        height: 90%;
+    }
+
+    .row-one-button-aprove{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .document-horizontal{
+        width: 340px;
+    }
+
+    .row-inputs-aprove{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input-modal-aprove{
+        width: 100%;
+    }
+
+    .input-denuncia,
+    .btnDenuncia{
+        width: 100% !important;
+    }
+}

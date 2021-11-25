@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <title>Google Maps API v3: Criando rotas</title>
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
+        <script src="js/jquery-1.11.3.min.js"></script>
+        <script src="js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    </head>
+ 
+    <body>
+    	<div id="site">
+        
+        	<h1>Google Maps API v3: Criando rotas</h1>
+        
+            <form method="post" action="index.html">
+                <fieldset>
+                    <legend>Criar rotas</legend>
+                    
+                    <div>
+                        <label for="txtEnderecoPartida">Endereço de partida:</label>
+                        <input type="text" id="txtEnderecoPartida" name="txtEnderecoPartida" />
+                        <input type="button" id="btnEndereco1" name="btnEndereco1" value="OK" />
+                    </div>
+                    
+                    <div>
+                        <label for="txtEnderecoChegada">Endereço de chegada:</label>
+                        <input type="text" id="txtEnderecoChegada" name="txtEnderecoChegada" />
+                        <input type="button" id="btnEndereco2" name="btnEndereco2" value="OK" />
+                    </div>
+                    
+                    <div>
+                        
+                    </div>
+                </fieldset>
+            </form>
+        
+            <div id="mapa"></div>
+            
+            <div id="trajeto-texto"></div>
+        
+        </div>
+		
+        <!-- Maps API Javascript -->
+        <script src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCAckKLHl-T6HPk2pTVfxrjHXf4yLojpfw&callback=initMap&libraries=&v=weekly=initMap&libraries=drawing"></script>
+ 
+        <!-- Arquivo de inicialização do mapa -->
+		<script src="js/mapa.js"></script>
+    </body>
+</html>
