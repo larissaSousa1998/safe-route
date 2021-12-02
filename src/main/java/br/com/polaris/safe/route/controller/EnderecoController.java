@@ -1,6 +1,8 @@
 package br.com.polaris.safe.route.controller;
 
 import br.com.polaris.safe.route.domain.Endereco;
+import br.com.polaris.safe.route.request.UsuariaEnderecoRequest;
+import br.com.polaris.safe.route.domain.UsuarioComum;
 import br.com.polaris.safe.route.repository.EnderecoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -32,7 +34,10 @@ public class EnderecoController {
     }
 
     @PostMapping
-    public ResponseEntity postEndereco(@RequestBody Endereco endereco) {
+    public ResponseEntity postEndereco(@RequestBody UsuariaEnderecoRequest usuariaEndereco) {
+        Endereco endereco = usuariaEndereco.getEndereco();
+        UsuarioComum usuaria = usuariaEndereco.getUsuaria();
+        endereco.setUsuaria(usuaria);
         repository.save(endereco);
         return ResponseEntity.status(201).build();
     }
@@ -58,10 +63,10 @@ public class EnderecoController {
         }
     }
 
-//    @CrossOrigin
-//    @GetMapping("/usuaria/{id}")
-//    public ResponseEntity getEnderecoPorUsuaria(@PathVariable int id){
-//        return ResponseEntity.status(200).body(repository.findAllByIdUsuaria(id));
-//    }
+    @CrossOrigin
+    @GetMapping("/usuaria/{id}")
+    public ResponseEntity getEnderecoPorUsuaria(@PathVariable int id){
+        return ResponseEntity.status(200).body(repository.findAllByUsuariaId(id));
+    }
 
 }

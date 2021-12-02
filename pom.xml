@@ -14,7 +14,7 @@
   <name>safe-route</name>  
   <description>API Spring boot para o sistema Safe Routt</description>  
   <properties> 
-    <java.version>1.8</java.version>  
+    <java.version>11</java.version>
     <!--plugins-->  
     <azure-webapp-plugin.version>1.14.0</azure-webapp-plugin.version> 
   </properties>  
@@ -71,7 +71,7 @@
           <region>brazilsouth</region>  
           <runtime> 
             <os>Linux</os>  
-            <javaVersion>Java 8</javaVersion>  
+            <javaVersion>Java 11</javaVersion>
             <webContainer>Java SE</webContainer> 
           </runtime>
           <appSettings>

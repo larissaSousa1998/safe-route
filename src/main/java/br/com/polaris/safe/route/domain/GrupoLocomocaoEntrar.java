@@ -20,6 +20,9 @@ public class GrupoLocomocaoEntrar {
     @Column(name = "dataEntradaUsuaria")
     private LocalDate dataEntrada;
 
+    @Column(name = "isAdministradora")
+    private Boolean isAdministradora;
+
     public GrupoLocomocaoEntrar(){
     }
 
@@ -60,5 +63,13 @@ public class GrupoLocomocaoEntrar {
 
     public void setDataEntrada(LocalDate dataEntrada) {
         this.dataEntrada = dataEntrada;
+    }
+
+    public Boolean getAdministradora() {
+        return isAdministradora;
+    }
+
+    public void setAdministradora(Boolean administradora) {
+        isAdministradora = administradora;
     }
 }

@@ -22,7 +22,7 @@ public class GrupoLocomocao {
     @Column(name = "isPrivado")
     private Boolean privado;
 
-    @OneToOne(mappedBy = "grupoLocomocao")
+    @OneToOne(mappedBy = "grupoLocomocao", cascade = {CascadeType.ALL})
     private Viagem viagem;
 
     @OneToMany(mappedBy = "grupoLocomocao")

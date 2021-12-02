@@ -2,6 +2,7 @@ package br.com.polaris.safe.route.controller;
 
 import br.com.polaris.safe.route.domain.PilhaObj;
 import br.com.polaris.safe.route.domain.Publicacao;
+import br.com.polaris.safe.route.domain.UsuarioComum;
 import br.com.polaris.safe.route.repository.PublicacaoRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,7 +43,7 @@ public class PublicacaoController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity deletePublicacao(@RequestBody int id){
+    public ResponseEntity deletePublicacao(@PathVariable int id){
         if(repository.existsById(id)){
             repository.deleteById(id);
             return ResponseEntity.status(200).build();
@@ -65,14 +66,20 @@ public class PublicacaoController {
     @CrossOrigin
     @PostMapping(consumes = {"multipart/form-data"})
     public ResponseEntity postPublicacao(@RequestParam("publicacao") String jsonPublicacao,
-                                         @RequestParam("foto") MultipartFile fotoPublicacao){
+                                         @RequestParam("foto") MultipartFile fotoPublicacao,
+                                         @RequestParam("usuaria") String jsonUsuaria){
 
         ObjectMapper mapper = new ObjectMapper();
-        Publicacao publicacao = new Publicacao();
+        Publicacao publicacao;
+        UsuarioComum usuaria;
 
         try {
             publicacao = mapper.readValue(jsonPublicacao, Publicacao.class);
             publicacao.setFoto(fotoPublicacao.getBytes());
+
+            usuaria = mapper.readValue(jsonUsuaria, UsuarioComum.class);
+            publicacao.setUsuaria(usuaria);
+
             repository.save(publicacao);
             return ResponseEntity.status(201).build();
         } catch ( IOException  exception) {

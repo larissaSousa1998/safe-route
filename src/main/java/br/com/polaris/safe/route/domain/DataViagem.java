@@ -22,7 +22,6 @@ public class DataViagem {
     private String diaSemana;
 
     @NotNull
-    @NotBlank
     private LocalTime horario;
 
     @ManyToOne

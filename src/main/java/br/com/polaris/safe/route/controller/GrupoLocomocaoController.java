@@ -1,11 +1,18 @@
 package br.com.polaris.safe.route.controller;
 
-import br.com.polaris.safe.route.domain.GrupoLocomocao;
+import br.com.polaris.safe.route.domain.*;
+import br.com.polaris.safe.route.repository.DataViagemRepository;
+import br.com.polaris.safe.route.repository.GrupoLocomocaoEntrarRepository;
 import br.com.polaris.safe.route.repository.GrupoLocomocaoRepository;
+import br.com.polaris.safe.route.repository.ViagemRepository;
+import br.com.polaris.safe.route.request.UsuariaGrupoLocomocaoRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.xml.crypto.Data;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
@@ -14,6 +21,9 @@ public class GrupoLocomocaoController {
 
     @Autowired
     private GrupoLocomocaoRepository repository;
+
+    @Autowired
+    private GrupoLocomocaoEntrarRepository entrarRepository;
 
     @GetMapping
     public ResponseEntity GetGrupos() {
@@ -44,9 +54,31 @@ public class GrupoLocomocaoController {
     }
 
     @PostMapping
-    public ResponseEntity postGrupos(@RequestBody GrupoLocomocao grupoLocomocao) {
+    public ResponseEntity postGrupos(@RequestBody UsuariaGrupoLocomocaoRequest usuariaGrupoLocomocaoRequest) {
+        GrupoLocomocao grupoLocomocao = usuariaGrupoLocomocaoRequest.getGrupoLocomocao();
+        grupoLocomocao.setData(LocalDate.now());
+        grupoLocomocao.setPrivado(false);
+
+        grupoLocomocao = repository.save(grupoLocomocao);
+
+        Viagem viagem = grupoLocomocao.getViagem();
+        viagem.setGrupoLocomocao(grupoLocomocao);
+        viagem.getDatasViagem().forEach(dataViagem -> dataViagem.setViagem(viagem));
+
         repository.save(grupoLocomocao);
+
+        this.registerUserInNewGroup(grupoLocomocao, usuariaGrupoLocomocaoRequest.getUsuaria());
+
         return ResponseEntity.status(200).build();
+    }
+
+    private void registerUserInNewGroup(GrupoLocomocao grupoLocomocao, UsuarioComum usuaria) {
+        GrupoLocomocaoEntrar grupoLocomocaoEntrar = new GrupoLocomocaoEntrar();
+        grupoLocomocaoEntrar.setIdGrupoLocomocao(grupoLocomocao.getId());
+        grupoLocomocaoEntrar.setIdUsuaria(usuaria.getId());
+        grupoLocomocaoEntrar.setAdministradora(true);
+        grupoLocomocaoEntrar.setDataEntrada(LocalDate.now());
+        entrarRepository.save(grupoLocomocaoEntrar);
     }
 
     @DeleteMapping("/{id}")

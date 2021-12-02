@@ -1,6 +1,8 @@
 package br.com.polaris.safe.route.controller;
 
 import br.com.polaris.safe.route.domain.DenunciaLocal;
+import br.com.polaris.safe.route.domain.UsuariaDenunciaLocal;
+import br.com.polaris.safe.route.domain.UsuarioComum;
 import br.com.polaris.safe.route.domain.export.LeituraDenuncia;
 import br.com.polaris.safe.route.domain.export.LeituraGravacao;
 import br.com.polaris.safe.route.repository.DenunciaLocalRepository;
@@ -42,7 +44,11 @@ public class DenunciaLocalController {
 
     @CrossOrigin
     @PostMapping
-    public ResponseEntity postDenunciaLocal(@RequestBody DenunciaLocal denunciaLocal) {
+    public ResponseEntity postDenunciaLocal(@RequestBody UsuariaDenunciaLocal usuariaDenunciaLocal) {
+        DenunciaLocal denunciaLocal = usuariaDenunciaLocal.getDenunciaLocal();
+        UsuarioComum usuaria = usuariaDenunciaLocal.getUsuaria();
+        denunciaLocal.setUsuaria(usuaria);
+
         repository.save(denunciaLocal);
         return ResponseEntity.status(201).build();
     }

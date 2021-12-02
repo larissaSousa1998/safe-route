@@ -18,8 +18,7 @@ public class Viagem {
     private String latitudeOrigem;
     private String latitudeDestino;
 
-
-    @OneToMany(mappedBy = "viagem")
+    @OneToMany(mappedBy = "viagem", cascade = CascadeType.ALL)
     private List<DataViagem> datasViagem;
 
     @OneToOne
@@ -73,6 +72,14 @@ public class Viagem {
 
     public void setDatasViagem(List<DataViagem> datasViagem) {
         this.datasViagem = datasViagem;
+    }
+
+    public GrupoLocomocao getGrupoLocomocao() {
+        return grupoLocomocao;
+    }
+
+    public void setGrupoLocomocao(GrupoLocomocao grupoLocomocao) {
+        this.grupoLocomocao = grupoLocomocao;
     }
 }
 
